@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,8 @@ namespace TwoRatChat.Main.Dialogs {
     /// <summary>
     /// Логика взаимодействия для OptionsDialog.xaml
     /// </summary>
+    /// 
+
     public partial class OptionsDialog : Window {
         public OptionsDialog() {
             InitializeComponent();
@@ -62,8 +65,8 @@ namespace TwoRatChat.Main.Dialogs {
 
         List<IdValue> _GGMode = new List<IdValue>();
         List<IdValue> _ImageMode = new List<IdValue>();
-
-        private void Rectangle_MouseLeftButtonDown( object sender, MouseButtonEventArgs e ) {
+        
+            private void Rectangle_MouseLeftButtonDown( object sender, MouseButtonEventArgs e ) {
             WPFColorPickerLib.ColorDialog cd = new WPFColorPickerLib.ColorDialog( Converters.ColorToUIntConverter.FromUInt( Properties.Settings.Default.Window_AccentColor ) );
             var r = cd.ShowDialog();
             if( r.HasValue && r.Value )
@@ -95,7 +98,6 @@ namespace TwoRatChat.Main.Dialogs {
             HttpListenEditor hle = new HttpListenEditor();
             hle.ShowDialog();
         }
-
         public class IdValue {
             public int id { get; set; }
             public string text { get; set; }
@@ -110,6 +112,28 @@ namespace TwoRatChat.Main.Dialogs {
             }
         }
 
+        private void TwitchAPIpasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            
+        Properties.Settings.Default.twitchAPIKey = twitchAPIpasswordBox.Password.ToString();
+            //MessageBox.Show("но Twitch API key установлен: " + twitchAPIpasswordBox.Password, "В настройках будет пусто,");
+
+
+        }
+        //MessageBox.Show("настройки" + ConfigurationManager.AppSettings["twitchClientId"] );
+        private void TwitchsecretpasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+
+            Properties.Settings.Default.twitchSecret = twitchsecretpasswordBox.Password.ToString();
+            //MessageBox.Show("но Twitch secret установлен: " + twitchpasswordBox.Password, "В настройках будет пусто,");
+        }
+
+        private void YoutubeAPIpasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+
+            Properties.Settings.Default.youTubeAPIKey = youtubeAPIpasswordBox.Password.ToString();
+            //MessageBox.Show("но Youtube API установлен:" + youtubepasswordBox.Password, "В настройках будет пусто, "); 
+        }
         private void ButtonWL_Click( object sender, RoutedEventArgs e ) {
             BlackListForm blf = new BlackListForm();
             blf.ShowDialog( MainWindow.chat.ImageWhiteList, "Image white list" );

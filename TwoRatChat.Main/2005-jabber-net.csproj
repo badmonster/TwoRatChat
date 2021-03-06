@@ -466,10 +466,12 @@
     <EmbeddedResource Include="jabber\connection\ConferenceManager.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="netlib.Dns, Version=1.1.7643.12279, Culture=neutral, PublicKeyToken=924c5b18328d6f09, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>netlib.Dns\bin\Debug\netlib.Dns.dll</HintPath>
-    </Reference>
+    <ProjectReference Condition="'$(BuildMono)'==''" Include="netlib.Dns\netlib.Dns.csproj">
+      <Project>{40AC7A7C-D3E5-46DF-B740-06BD9D2A00E1}</Project>
+      <Name>netlib.Dns</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>

@@ -110,7 +110,7 @@
                            Grid.Column="1" Foreground="White" />
                 </Grid>
             </Border>
-            
+
             <DataTemplate.Triggers>
                 <DataTrigger Binding="{Binding Status}"  Value="False">
                     <Setter TargetName="btn" Property="Visibility" Value="Visible" />
@@ -138,14 +138,14 @@
         <ContextMenu>
             <MenuItem Header="{x:Static loc:Resources.cxt_AddChatSource}" 
                       Click="MenuItem_Click" />
-            
+
             <Separator />
             <MenuItem Header="{x:Static loc:Resources.cxt_Blacklist}" 
                       Click="BlacklistEditor_Click"  />
-            
+
             <MenuItem Header="{x:Static loc:Resources.cxt_Fortunering}" 
                       Click="FortuneRingEditor_Click" />
-            
+
             <MenuItem Header="{x:Static loc:Resources.cxt_Polleditor}" 
                       Click="PollEditor_Click" />
 
@@ -197,25 +197,25 @@
         <Border Style="{DynamicResource HeaderBorder}" />
 
         <!--<StackPanel Orientation="Horizontal">-->
-            <Label x:Name="header" Content="TwoRatChat"
+        <Label x:Name="header" Content="TwoRatChat"
 			       Style="{DynamicResource WindowHeaderStyle}" />
-            
-            <!--<Label Content="[Trans]"
+
+        <!--<Label Content="[Trans]"
                    Visibility="Hidden"
                    />-->
 
-            <ListBox x:Name="PART_Header" HorizontalAlignment="Right" Margin="0,0,2,0"
+        <ListBox x:Name="PART_Header" HorizontalAlignment="Right" Margin="0,0,2,0"
                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                  ScrollViewer.VerticalScrollBarVisibility="Disabled"
                                  Template="{DynamicResource HeaderContent}"
                                  ItemsSource="{Binding}"
                                  ItemTemplate="{DynamicResource BrandIcon}">
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Horizontal" IsItemsHost="True" />
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-            </ListBox>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" IsItemsHost="True" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
         <!--</StackPanel>-->
 
         <ctrl:HtmlViewControl x:Name="webControl" Grid.Row="1" Padding="0"
@@ -223,7 +223,7 @@
                         IsHitTestVisible="{Binding Window_DisableFullDrag, Mode=OneWay, Source={x:Static loc:Settings.Default}}"
                         IsTransparent="True" >
             <ctrl:HtmlViewControl.ContextMenu>
-                <ContextMenu />               
+                <ContextMenu />
             </ctrl:HtmlViewControl.ContextMenu>
         </ctrl:HtmlViewControl>
 

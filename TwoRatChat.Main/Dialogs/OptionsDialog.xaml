@@ -361,6 +361,36 @@
 
 
                 <Border Background="Black" Height="1" Margin="2" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Custom Twitch API KEY:" VerticalAlignment="Top" />
+                    <!--<TextBox Text="{Binding twitchAPIKey, Mode=TwoWay, Source={x:Static loc:Settings.Default}}" Grid.Column="1" VerticalAlignment="Center" Visibility="Hidden" />-->
+                    <PasswordBox 
+                        x:Name="twitchAPIpasswordBox" 
+                        PasswordChanged="TwitchAPIpasswordBox_PasswordChanged" 
+                        PasswordChar="X" VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="291,0,291,0"    
+                    />
+                    <Grid Grid.ColumnSpan="3" Margin="0,323,0,-323">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        
+                    </Grid>
+                    <TextBlock Text="Custom Twitch Client Secret:" HorizontalAlignment="Left" Margin="141,27,0,0" VerticalAlignment="Top" />
+                    <PasswordBox 
+                        x:Name="twitchsecretpasswordBox" 
+                        PasswordChanged="TwitchsecretpasswordBox_PasswordChanged" 
+                        PasswordChar="X" VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="291,27,291,0"    
+                    />
+
+                </Grid>
 
 
                 <Grid>
@@ -405,10 +435,15 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="{x:Static loc:Resources.OPT_YoutubeIcon}" />
-                    <CheckBox IsChecked="{Binding youtube_ShowIcons, Mode=TwoWay, Source={x:Static loc:Settings.Default}}" Grid.Column="1" VerticalAlignment="Center" />
+                    <TextBlock Text="{x:Static loc:Resources.OPT_YoutubeAPIKey}" />
+                    <!-- <TextBox Text="{Binding youTubeAPIKey, Mode=TwoWay, Source={x:Static loc:Settings.Default}}" Grid.Column="1" VerticalAlignment="Center" /> -->
+                    <PasswordBox 
+                        x:Name="youtubeAPIpasswordBox" 
+                        PasswordChanged="YoutubeAPIpasswordBox_PasswordChanged" 
+                        PasswordChar="X" 
+                        Grid.Column="1" VerticalAlignment="Center" 
+                    />
                 </Grid>
-
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
@@ -416,12 +451,9 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="{x:Static loc:Resources.OPT_YoutubeAPIKey}" />
-                    <TextBox Text="{Binding youTubeAPIKey, Mode=TwoWay, Source={x:Static loc:Settings.Default}}" Grid.Column="1" VerticalAlignment="Center" />
+                    <TextBlock Text="{x:Static loc:Resources.OPT_YoutubeIcon}" />
+                    <CheckBox IsChecked="{Binding youtube_ShowIcons, Mode=TwoWay, Source={x:Static loc:Settings.Default}}" Grid.Column="1" VerticalAlignment="Center" />
                 </Grid>
-
-
-                <Border Background="Black" Height="1" Margin="2" />
 
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -728,7 +760,7 @@
                         SelectedValue="{Binding voice_voiceId, Mode=TwoWay, Source={x:Static loc:Settings.Default}}" 
                             
                         Grid.Column="1" Margin="1,0" VerticalAlignment="Center" >
-                        
+
                     </ComboBox>
                 </Grid>
 
@@ -820,16 +852,23 @@
                     <TextBlock Text="E-mail: " />
                     <TextBox Text="JustOxlamon+TwoRatChat@gmail.com" />
                 </StackPanel>
-                
+
                 <TextBlock Text="Special thanks to:" FontSize="20"
                                HorizontalAlignment="Center" TextAlignment="Center"
                                FontWeight="Bold" />
                 <TextBlock Text="Silent Fly - main application icon" FontSize="14"
                                HorizontalAlignment="Center" TextAlignment="Center"
                               />
+                <TextBlock Text="Fork by PetrovMonster:" FontSize="20"
+                               HorizontalAlignment="Center" TextAlignment="Center"
+                               FontWeight="Bold" Foreground="#FF55AAFF" />
+                <TextBlock Text="www.monst3r.ru" FontSize="14"
+                               HorizontalAlignment="Center" TextAlignment="Center"
+                              />
+                <Image Height="155" Width="198" Source="/Dialogs/qr.png"/>
             </StackPanel>
         </TabItem>
 
-    
+
     </TabControl>
 </Window>

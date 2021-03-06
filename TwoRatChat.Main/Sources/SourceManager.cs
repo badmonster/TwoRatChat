@@ -55,7 +55,7 @@ namespace TwoRatChat.Main.Sources {
                 SourceId = "twitchtv"
             } );
 
-            Sources.Add( new Source() {
+            /* Sources.Add( new Source() {
                 Id = Sources.Count + 1,
                 Title = "http://cybergame.tv/",
                 Type = typeof( Cybergame_ChatSource ),
@@ -63,7 +63,7 @@ namespace TwoRatChat.Main.Sources {
                 Param1 = Main.Properties.Resources.MES_Streamer,
                 Param2 = Main.Properties.Resources.MES_Label,
                 SourceId = "cybergame"
-            } );
+            } ); */
 
             Sources.Add( new Source() {
                 Id = Sources.Count + 1,
@@ -75,7 +75,7 @@ namespace TwoRatChat.Main.Sources {
                 SourceId = "sc2tv"
             } );
 
-            Sources.Add(new Source()
+            /*Sources.Add(new Source()
             {
                 Id = Sources.Count + 1,
                 Title = "http://www.empiretv.org/ - UNTESTED!",
@@ -84,7 +84,7 @@ namespace TwoRatChat.Main.Sources {
                 Param1 = Main.Properties.Resources.MES_Streamer,
                 Param2 = Main.Properties.Resources.MES_Label,
                 SourceId = "empire"
-            } );
+            } ); */
 
             Sources.Add(new Source()
             {
@@ -96,7 +96,7 @@ namespace TwoRatChat.Main.Sources {
                 Param2 = Main.Properties.Resources.MES_Label,
                 SourceId = "gohatv"
             } );
-
+            /* Удалить если нужно вернуть Midlane, только не понимает что такое :D jabber. Фиксану изи.
             Sources.Add(new Source()
             {
                 Id = Sources.Count + 1,
@@ -107,7 +107,7 @@ namespace TwoRatChat.Main.Sources {
                 Param2 = Main.Properties.Resources.MES_Label,
                 SourceId = "midlane"
             } );
-
+            */
             Sources.Add( new Source() {
                 Id = Sources.Count + 1,
                 Title = "http://gipsyteam.ru/",
@@ -139,7 +139,7 @@ namespace TwoRatChat.Main.Sources {
             } );
 
 
-            Sources.Add( new Source() {
+            /*Sources.Add( new Source() {
                 Id = Sources.Count + 1,
                 Title = "http://www.hitbox.tv/",
                 Type = typeof( HitboxTV_ChatSource ),
@@ -147,7 +147,7 @@ namespace TwoRatChat.Main.Sources {
                 Param1 = Main.Properties.Resources.MES_Id,
                 Param2 = Main.Properties.Resources.MES_Label,
                 SourceId = "hitboxtv"
-            } );
+            } );*/
 
             Sources.Add( new Source() {
                 Id = Sources.Count + 1,

@@ -8,14 +8,22 @@ using System.Xml.Linq;
 using TwoRatChat.Main.Commands;
 using TwoRatChat.Main.Helpers;
 using TwoRatChat.Model;
+using System.Threading.Tasks;
+using TwoRatChat.Main.Properties;
+using TwoRatChat.Main.NewTwitchAuth;
+//using ImpromptuNinjas.UltralightSharp;
 
-namespace TwoRatChat.Main {
+namespace TwoRatChat.Main
+{
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window,  IResourceInterceptor {
+    public partial class MainWindow : System.Windows.Window,  IResourceInterceptor {
+
         public MainWindow() {
-            InitializeComponent();
+            InitializeComponent(); new NewTwitchAuthWindow().Show();
+
+
 
             Awesomium.Core.WebCore.Initialize( new WebConfig() {
                 UserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 5_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B176 Safari/7534.48.3"                
@@ -217,7 +225,9 @@ namespace TwoRatChat.Main {
             _timer.Stop();
             _chat.Save();
             _chat.Stop();
+
             Properties.Settings.Default.Save();
+            
 
             TwoRatChat.Commands.CommandFactory.Destroy();
         }
@@ -369,5 +379,29 @@ namespace TwoRatChat.Main {
             Talk t = new Talk();
             t.Show();
         }
+        /*public async Task TwitchRefreshTokenAsync()
+        {
+            var api = new TwitchLib.Api.TwitchAPI();
+
+            if (TwoRatChat.Main.Sources.Twitch_ChatSource.twitchexpirein != null)
+            {
+                //if (TwoRatChat.Main.Sources.Twitch_ChatSource.twitchexpirein.ExpiresIn < DateTime.Now)
+                //{
+                var refresh = await api.Auth.RefreshAuthTokenAsync(Settings.Default.Twitchrefreshtoken, Settings.Default.twitchSecret);
+                api.Settings.AccessToken = refresh.AccessToken;
+                Settings.Default.Twitchaccesstoken = api.Settings.AccessToken;
+                // refresh the expired token
+                //var refresh = await oAauth.RefreshTokenAsync("refresh token here");
+                // validate the new token
+                //var validate = await oAuth.ValidateTokenAsync(refresh.AccessToken);
+                // do other stuff here
+                //}
+                //else
+                //{
+                // token is still valid
+            }
+         }*/
     }
+
 }
+
