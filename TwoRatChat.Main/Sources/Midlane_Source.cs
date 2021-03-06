@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿/* using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -129,7 +129,7 @@ namespace TwoRatChat.Main.Sources {
 
 
             // Console.WriteLine( msg.InnerXml );
-
+            /*ЭТО УБРАТЬ by МОНСТР in fine end.
             newMessagesArrived( new ChatMessage[] { 
                 new ChatMessage() {
                                        Date = DateTime.Now,
@@ -163,3 +163,4 @@ namespace TwoRatChat.Main.Sources {
         }
     }
 }
+*/

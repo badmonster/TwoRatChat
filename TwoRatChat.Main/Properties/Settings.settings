@@ -30,7 +30,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="url_Goodgame" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ws://chat.goodgame.ru:8081/chat/websocket|ws://goodgame.ru:8081/chat/websocket</Value>
+      <Value Profile="(Default)">wss://chat.goodgame.ru/chat/websocket|wss://chat.goodgame.ru/chat/websocket</Value>
     </Setting>
     <Setting Name="Chat_LoadHistory" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
@@ -186,7 +186,7 @@
       <Value Profile="(Default)">IVONA 2 Tatyana</Value>
     </Setting>
     <Setting Name="youTubeAPIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">Сюда ваш Youtube API Key.</Value>
     </Setting>
     <Setting Name="voice_ask" Type="System.String" Scope="User">
       <Value Profile="(Default)">{0} спрашивает: '{1}'</Value>
@@ -196,6 +196,21 @@
     </Setting>
     <Setting Name="voice_caps" Type="System.String" Scope="User">
       <Value Profile="(Default)">{0} восклицает: '{1}'</Value>
+    </Setting>
+    <Setting Name="twitchAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Сюда ваш Twitch API Key.</Value>
+    </Setting>
+    <Setting Name="Twitchaccesstoken" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="twitchSecret" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Сюда ваш Twitch Secret.</Value>
+    </Setting>
+    <Setting Name="Twitchrefreshtoken" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TwitchChannelID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

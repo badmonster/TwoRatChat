@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿/* ЭТО ЗАКОММЕНТИЛ PetrovMonster using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Net;
@@ -12,10 +12,10 @@ namespace TwoRatChat.Main.Sources {
         //http://api.hitbox.tv/media/live/yuuhi
         //https://www.hitbox.tv/api/chat/servers
         //
-
-        /*
-        {"method":"loginMsg","params":{"channel":"yuuhi","name":"UnknownSoldier","role":"guest"}}
-        {"method":"chatMsg","params":{"channel":"yuuhi","name":"BKKW91","nameColor":"26BE50","text":"@Sielson liczyłem na to, że ktoś się nabierze :P","time":1441907549,"role":"anon","isFollower":true,"isSubscriber":false,"isOwner":false,"isStaff":false,"isCommunity":false,"media":false,"buffer":true}}
+ЭТО ЗАКОММЕНТИЛ PetrovMonster */
+/*
+{"method":"loginMsg","params":{"channel":"yuuhi","name":"UnknownSoldier","role":"guest"}}
+{"method":"chatMsg","params":{"channel":"yuuhi","name":"BKKW91","nameColor":"26BE50","text":"@Sielson liczyłem na to, że ktoś się nabierze :P","time":1441907549,"role":"anon","isFollower":true,"isSubscriber":false,"isOwner":false,"isStaff":false,"isCommunity":false,"media":false,"buffer":true}}
 
 
 5:::{"name":"message","args":["{\"method\":\"loginMsg\",\"params\":{\"channel\":\"yuuhi\",\"name\":\"UnknownSoldier\",\"role\":\"guest\"}}"]}
@@ -29,9 +29,9 @@ namespace TwoRatChat.Main.Sources {
 5:::{"name":"message","args":["{\"method\":\"chatMsg\",\"params\":{\"channel\":\"yuuhi\",\"name\":\"upadlytrol\",\"nameColor\":\"79BE29\",\"text\":\"@VaderV1 elo lord vader\",\"time\":1441906018,\"role\":\"anon\",\"isFollower\":true,\"isSubscriber\":false,\"isOwner\":false,\"isStaff\":false,\"isCommunity\":false,\"media\":false,\"buffer\":true,\"buffersent\":true}}"]}
 5:::{"name":"message","args":["{\"method\":\"chatMsg\",\"params\":{\"channel\":\"yuuhi\",\"name\":\"VaderV1\",\"nameColor\":\"D35635\",\"text\":\"<img src=\\\"http://edge.sf.hitbox.tv//static/img/chat/yuuhi/emotes/emoji_55ca133ff38cb.png\\\" title=\\\"Ypiatka\\\" alt=\\\"\\\" class=\\\"smiley sub-emotes channel-sub-emote\\\">  <img src=\\\"http://edge.sf.hitbox.tv//static/img/chat/yuuhi/emotes/emoji_55ca133ff38cb.png\\\" title=\\\"Ypiatka\\\" alt=\\\"\\\" class=\\\"smiley sub-emotes channel-sub-emote\\\">  <img src=\\\"http://edge.sf.hitbox.tv//static/img/chat/yuuhi/emotes/emoji_55ca133ff38cb.png\\\" title=\\\"Ypiatka\\\" alt=\\\"\\\" class=\\\"smiley sub-emotes channel-sub-emote\\\">  <img src=\\\"http://edge.sf.hitbox.tv//static/img/chat/yuuhi/emotes/emoji_55ca133ff38cb.png\\\" title=\\\"Ypiatka\\\" alt=\\\"\\\" class=\\\"smiley sub-emotes channel-sub-emote\\\">  <img src=\\\"http://edge.sf.hitbox.tv//static/img/chat/yuuhi/emotes/emoji_55ca133ff38cb.png\\\" title=\\\"Ypiatka\\\" alt=\\\"\\\" class=\\\"smiley sub-emotes channel-sub-emote\\\">   \",\"time\":1441906044,\"role\":\"anon\",\"isFollower\":true,\"isSubscriber\":true,\"isOwner\":false,\"isStaff\":false,\"isCommunity\":false,\"media\":false,\"image\":\"/static/img/chat/yuuhi/badge.png\"}}"]}
 
-    */
-
-        string socketAddr;
+*/
+/* ЭТО ЗАКОММЕНТИЛ PetrovMonster
+string socketAddr;
 
         public HitboxTV_ChatSource(Dispatcher dispatcher)
             : base(dispatcher) {
@@ -236,3 +236,4 @@ namespace TwoRatChat.Main.Sources {
 
 
 }
+ЭТО ЗАКОММЕНТИЛ PetrovMonster */

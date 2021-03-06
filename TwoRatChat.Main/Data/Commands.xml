@@ -98,15 +98,31 @@
         <soundfile fileName="\Sounds\joke_drum_effect.mp3" volume="0.9"/>
       </playsound>
     </action>
+	
+	<action>
+      <hotkey key="T" modifiers="Shift + Control"/>
 
-    <action id="attention">
+      <playsound volume="0.7">
+        <soundfile fileName="\Sounds\trombon.mp3" volume="0.9"/>
+      </playsound>
+    </action>
+	
+	<action>
+      <hotkey key="R" modifiers="Shift + Control"/>
+
+      <playsound volume="0.7">
+        <soundfile fileName="\Sounds\razdume.mp3" volume="0.9"/>
+      </playsound>
+    </action>
+	
+    <!--Монстер убрал<action id="attention">
       <null />
       <playsound volume="0.7">
         <soundfile fileName="\Sounds\Devicecon.wav" volume="0.5"/>
       </playsound>
-    </action>
+    </action>-->
 
-    <action id="newviewer">
+    <!-- Монстер убрал <action id="newviewer">
       <null/>
       <speech voice="IVONA 2 Tatyana" text="Новый крыс жаждет геноцида"/>
     </action>
@@ -115,10 +131,10 @@
       <hotkey key="Q" modifiers="Shift + Control"/>
 
       <jscommand dest="Server" cmd="shownotify" prms="Всем привет, это крысочат!"/>
-      <speech voice="IVONA 2 Tatyana" text="Крысо-чат активирован"/>
+      <speech voice="IVONA 2 Tatyana" text="Крысо-чат активирован"/>-->
 
-      <!--<radio cmd="PlayRadio" param1="http://pub5.di.fm:80/di_vocaltrance?86da8520b6949417344627ec" />-->
-    </action>
+      <!--<radio cmd="PlayRadio" param1="http://pub5.di.fm:80/di_vocaltrance?86da8520b6949417344627ec" />
+    </action>-->
 
     <!--<action>
       <track />
@@ -147,7 +163,7 @@
     </action>-->
   </profile>
 
- <profile id="DD" window="Darkest.Dungeon" onactive="ok">
+ <!-- Monster by comment <profile id="DD" window="Darkest.Dungeon" onactive="ok">
  	<action>
       <chat regex="\!go$" />
        <macro>
@@ -382,5 +398,5 @@
         xup ControlKey;
       </macro>
     </action>
-  </profile>
+  </profile>-->
 </root>

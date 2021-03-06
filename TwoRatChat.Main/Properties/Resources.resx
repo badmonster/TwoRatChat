@@ -217,7 +217,7 @@
     <value>Open skin designer...</value>
   </data>
   <data name="MES_Id" xml:space="preserve">
-    <value>Youtube video ID:</value>
+    <value>Youtube Channel ID:</value>
   </data>
   <data name="tip_PollAllowChange" xml:space="preserve">
     <value>Allow user change choice:</value>
@@ -357,5 +357,8 @@ Please, press the right mouse button to add chat source.</value>
   </data>
   <data name="OPT_voice_talk" xml:space="preserve">
     <value>Обычный текст:</value>
+  </data>
+  <data name="OPT_TwitchAPIKey" xml:space="preserve">
+    <value>Custom Twitch API KEY:</value>
   </data>
 </root>
