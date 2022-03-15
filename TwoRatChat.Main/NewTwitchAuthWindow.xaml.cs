@@ -85,20 +85,9 @@ namespace TwoRatChat.Main.NewTwitchAuth
             var authUrl = $"https://id.twitch.tv/oauth2/authorize?response_type=code&client_id={ClientId}&redirect_uri={RedirectUrl}&scope={String.Join("+", Scopes)}";
             //var authUrl = $"https://id.twitch.tv/oauth2/authorize?response_type=code&client_id={0}&redirect_uri=http://localhost&scope=channel_read&state=123456", TwoRatChat.Main.Properties.Settings.Default.twitchAPIKey
 
-
-            //try
-            //{
-
             //System.Diagnostics.Process.Start(authUrl);
             Browser.Address = authUrl;
             Browser = new ChromiumWebBrowser(authUrl);
-
-            //}
-
-            //catch (Exception ex)
-            //{
-            //    System.Diagnostics.Process.Start(authUrl);
-            //}
 
         }
 
@@ -144,9 +133,7 @@ namespace TwoRatChat.Main.NewTwitchAuth
             TheTwitchAPI = new TwitchAPI();
             TheTwitchAPI.Settings.ClientId = ClientId;
             TheTwitchAPI.Settings.AccessToken = accessToken;
-            //TwoRatChat.Main.Properties.Settings.Default.Twitchaccesstoken = accessToken;
-            //System.Windows.MessageBox.Show($"Authorization success! initTWITCHAPI \n КЛЮЧ здесь {accessToken} {Scopes}\n В настройках {TwoRatChat.Main.Properties.Settings.Default.Twitchaccesstoken})", CachedOwnerOfChannelAccessToken);
-
+            
         }
 
         void InitializeOwnerOfChannelConnection(string username, string accessToken)
@@ -232,9 +219,7 @@ namespace TwoRatChat.Main.NewTwitchAuth
             var api = new TwitchLib.Api.TwitchAPI();
             api.Settings.ClientId = ClientId;
             api.Settings.AccessToken = accessToken;
-            //TwoRatChat.Main.Properties.Settings.Default.Twitchaccesstoken = accessToken;
-            TwoRatChat.Main.Properties.Settings.Default.Twitchaccesstoken = api.Settings.AccessToken;
-            //System.Windows.MessageBox.Show($"access token: \n {accessToken}\n В настройках он: \n{TwoRatChat.Main.Properties.Settings.Default.Twitchaccesstoken}");
+            TwoRatChat.Main.Properties.Settings.Default.Twitchaccesstoken = api.Settings.AccessToken;          
 
             var oauthedUser = await api.Helix.Users.GetUsersAsync();
             TwitchChannelId = oauthedUser.Users[0].Id;
