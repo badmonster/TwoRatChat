@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoRatChat.MainTests", "Two
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2005-jabber-net", "JabberNet-2.1.0.710\2005-jabber-net.csproj", "{6CAE854A-F202-4D2B-B10E-E8D8E81E5EF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoRatChat.Voice", "TwoRatChat.Voice\TwoRatChat.Voice.csproj", "{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -277,6 +279,38 @@ Global
 		{6CAE854A-F202-4D2B-B10E-E8D8E81E5EF5}.Release45|x64.Build.0 = Release|Any CPU
 		{6CAE854A-F202-4D2B-B10E-E8D8E81E5EF5}.Release45|x86.ActiveCfg = Release|Any CPU
 		{6CAE854A-F202-4D2B-B10E-E8D8E81E5EF5}.Release45|x86.Build.0 = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug|x64.Build.0 = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug|x86.Build.0 = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug45|Any CPU.ActiveCfg = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug45|Any CPU.Build.0 = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug45|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug45|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug45|x64.ActiveCfg = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug45|x64.Build.0 = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug45|x86.ActiveCfg = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Debug45|x86.Build.0 = Debug|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release|x64.ActiveCfg = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release|x64.Build.0 = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release|x86.ActiveCfg = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release|x86.Build.0 = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release45|Any CPU.ActiveCfg = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release45|Any CPU.Build.0 = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release45|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release45|Mixed Platforms.Build.0 = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release45|x64.ActiveCfg = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release45|x64.Build.0 = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release45|x86.ActiveCfg = Release|Any CPU
+		{F302FF10-B2E1-4EFE-8193-8B41DCB5A46B}.Release45|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

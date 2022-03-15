@@ -20,5 +20,8 @@ namespace TwoRatChat.Interfaces {
         event Action<object> OnRecognize;
 
         List<string> Voices { get; }
+
+        //установка устройства
+        void SetupDevice(int deviceId);
     }
 }

@@ -133,6 +133,7 @@ namespace TwoRatChat.Commands {
                             _engine = Activator.CreateInstance( e ) as TwoRatChat.Interfaces.IVoiceEngine;
                             _engine.BeginInitialize( locale );
                             _engine.OnRecognize += _engine_OnRecognize;
+                            // for future use  _engine.SetupDevice(your_device_id);
                             break;
                         }
                     }
