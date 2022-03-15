@@ -924,14 +924,16 @@ namespace TwoRatChat.Main.Sources
                 wc.DownloadStringCompleted += (a, b) =>
                 {
                     if (b.Error == null)
+
                     {
                         dynamic response = Newtonsoft.Json.JsonConvert.DeserializeObject(b.Result);
-                        //if (response.status != 401)
 
                         if (response != null && response.total != null)
                         {
+
                             _followers = (int)response.total;
                             UpdateHeaderCount();
+
                         }
                     }
                 };
@@ -943,8 +945,10 @@ namespace TwoRatChat.Main.Sources
 
         public override void UpdateViewerCount()
         {
+
             if (!string.IsNullOrEmpty(_streamerNick))
                 PopulateViewerCount(_repopulateFollowers = !_repopulateFollowers);
+
         }
     }
 }
