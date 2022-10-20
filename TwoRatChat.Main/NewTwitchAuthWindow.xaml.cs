@@ -53,7 +53,7 @@ namespace TwoRatChat.Main.NewTwitchAuth
         };
         public NewTwitchAuthWindow()
         {
-            
+
 #if !NETCOREAPP
             var settings = new CefSettings()
             {
@@ -73,12 +73,28 @@ namespace TwoRatChat.Main.NewTwitchAuth
 
             Cef.Initialize(settings, performDependencyCheck: true, browserProcessHandler: null);
 #endif
-            
+
             InitializeComponent();
             DataContext = this;
+
+            InitializeWebServer();
+            var authUrl = $"https://id.twitch.tv/oauth2/authorize?response_type=code&client_id={ClientId}&redirect_uri={RedirectUrl}&scope={String.Join("+", Scopes)}";
+            //var authUrl = $"https://id.twitch.tv/oauth2/authorize?response_type=code&client_id={0}&redirect_uri=http://localhost&scope=channel_read&state=123456", TwoRatChat.Main.Properties.Settings.Default.twitchAPIKey
+
+            //System.Diagnostics.Process.Start(authUrl);
+
             //second = this;
+            WebBrowser(authUrl);
+
         }
 
+        public string WebBrowser(string authUrl)
+        {
+            Browser.Address = authUrl;
+            Browser = new ChromiumWebBrowser(authUrl);
+            return string.Format("<HTML><BODY>Thanks for allowing TwitchAuthWPF to authenticate<br></BODY></HTML>");
+        }
+        /*
         public void AvtorizButton_Click(object sender, EventArgs e)
         {
             InitializeWebServer();
@@ -90,7 +106,7 @@ namespace TwoRatChat.Main.NewTwitchAuth
             Browser = new ChromiumWebBrowser(authUrl);
 
         }
-
+        */
         public void InitializeWebServer()
         {
             //Create a web server locally, so we can make the request for OATH token related stuff
@@ -133,7 +149,7 @@ namespace TwoRatChat.Main.NewTwitchAuth
             TheTwitchAPI = new TwitchAPI();
             TheTwitchAPI.Settings.ClientId = ClientId;
             TheTwitchAPI.Settings.AccessToken = accessToken;
-            
+
         }
 
         void InitializeOwnerOfChannelConnection(string username, string accessToken)
@@ -219,7 +235,7 @@ namespace TwoRatChat.Main.NewTwitchAuth
             var api = new TwitchLib.Api.TwitchAPI();
             api.Settings.ClientId = ClientId;
             api.Settings.AccessToken = accessToken;
-            TwoRatChat.Main.Properties.Settings.Default.Twitchaccesstoken = api.Settings.AccessToken;          
+            TwoRatChat.Main.Properties.Settings.Default.Twitchaccesstoken = api.Settings.AccessToken;
 
             var oauthedUser = await api.Helix.Users.GetUsersAsync();
             TwitchChannelId = oauthedUser.Users[0].Id;

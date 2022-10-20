@@ -12,7 +12,7 @@
         <wpf:ChromiumWebBrowser
             x:Name="Browser"
             Address="http://www.monst3r.ru"/>
-        <Button Content="Sign in..." Cursor="Hand" Click="AvtorizButton_Click" BorderThickness="2,2,2,2" FlowDirection="LeftToRight" Height="22" Margin="0,0,91,32" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="295"/>
+        <!--<Button Content="Sign in..." Cursor="Hand" Click="AvtorizButton_Click" BorderThickness="2,2,2,2" FlowDirection="LeftToRight" Height="22" Margin="0,0,91,32" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="295"/>-->
         <Button Content="CheckSubs" Cursor="Hand" Click="GetSubButton_Click" Margin="0,0,436,32" HorizontalAlignment="Right" Width="78" Height="22" VerticalAlignment="Bottom"/>
         <!--<RichTextBox Margin="5,214,21,63" TextChanged="RichTextBox_TextChanged" Visibility="Hidden">
             <FlowDocument>
