@@ -630,8 +630,12 @@
     <Resource Include="Assets\youtube.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Sounds\razdume.mp3" />
-    <Content Include="Assets\Sounds\trombon.mp3" />
+    <Content Include="local\data\Sounds\razdume.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="local\data\Sounds\trombon.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Dialogs\qr.png" />
     <None Include="Data\FullSizes\js\jquery.cycleText.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -787,16 +791,16 @@
     <Resource Include="Assets\arrow_in.png" />
     <Resource Include="Assets\gamerstv.png" />
     <Resource Include="Assets\peka2tv.png" />
-    <Content Include="Assets\Sounds\joke_drum_effect.mp3">
+    <Content Include="local\data\Sounds\joke_drum_effect.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Sounds\l1.mp3">
+    <Content Include="local\data\Sounds\l1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Sounds\l2.mp3">
+    <Content Include="local\data\Sounds\l2.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Sounds\l3.mp3">
+    <Content Include="local\data\Sounds\l3.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Assets\wrench_orange.png" />

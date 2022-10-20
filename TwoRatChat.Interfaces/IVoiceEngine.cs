@@ -22,6 +22,6 @@ namespace TwoRatChat.Interfaces {
         List<string> Voices { get; }
 
         //установка устройства
-        void SetupDevice(int deviceId);
+        //void SetupDevice(int deviceId);
     }
 }

@@ -183,7 +183,7 @@
       <Value Profile="(Default)">wss://chat.funstream.tv</Value>
     </Setting>
     <Setting Name="voice_voiceId" Type="System.String" Scope="User">
-      <Value Profile="(Default)">IVONA 2 Tatyana</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="youTubeAPIKey" Type="System.String" Scope="User">
       <Value Profile="(Default)">Сюда ваш Youtube API Key.</Value>
