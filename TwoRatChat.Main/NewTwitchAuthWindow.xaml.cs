@@ -60,7 +60,7 @@ namespace TwoRatChat.Main.NewTwitchAuth
 
                 //By default CefSharp will use an in-memory cache, you need to specify a Cache Folder to persist data
 
-                CachePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CefSharp\\Cache")
+                CachePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Oxlamon\\CefSharp\\Cache")
 
             };
 
@@ -266,10 +266,10 @@ namespace TwoRatChat.Main.NewTwitchAuth
         {
 
             if (TheTwitchAPI == null)
-                System.Windows.MessageBox.Show($"Сперва авторизуйтесь! Перейдя по кнопке Sign in...\n Не смогу получить нужные данные без этого.\n (Вы же вписали все API ключи в настройки TwoRatChat?!)", "Ошибка авторизации", MessageBoxButton.OK, MessageBoxImage.Error);
+                System.Windows.MessageBox.Show($"Сперва авторизуйтесь! Перейдя по кнопке Log in...\n Не смогу получить нужные данные без этого.\n (Вы же вписали все API ключи в настройки TwoRatChat?!)", "Ошибка авторизации", MessageBoxButton.OK, MessageBoxImage.Error);
             try
             {
-                GetBroadcasterSubscriptionsResponse subscribers = TheTwitchAPI.Helix.Subscriptions.GetBroadcasterSubscriptionsAsync(TwitchChannelId, null, 100, CachedOwnerOfChannelAccessToken).Result;
+                GetBroadcasterSubscriptionsResponse subscribers = TheTwitchAPI.Helix.Subscriptions.GetBroadcasterSubscriptionsAsync(TwitchChannelId, 100, null, CachedOwnerOfChannelAccessToken).Result;
 
                 if (subscribers.Data.Length == 0)
 
