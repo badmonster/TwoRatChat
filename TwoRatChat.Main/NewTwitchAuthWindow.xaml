@@ -9,11 +9,13 @@
     <Grid>
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
-        <wpf:ChromiumWebBrowser
+        <!--BackBrowser<wpf:ChromiumWebBrowser
             x:Name="Browser"
-            Address="https://www.monst3r.ru"/>
+            Address="https://www.monst3r.ru"/>-->
         <!--<Button Content="Sign in..." Cursor="Hand" Click="AvtorizButton_Click" BorderThickness="2,2,2,2" FlowDirection="LeftToRight" Height="22" Margin="0,0,91,32" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="295"/>-->
         <Button Content="CheckSubs" Cursor="Hand" Click="GetSubButton_Click" Margin="0,0,436,32" HorizontalAlignment="Right" Width="78" Height="22" VerticalAlignment="Bottom"/>
+        <Label Content="Временно авторизация проходит в вашем браузере. Причины:" HorizontalAlignment="Center" Margin="0,251,0,0" Width="480" Height="37" FontSize="16" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,293,0,0" TextWrapping="Wrap" Text="https://twitter.com/TwitchSupport/status/1575571090994102272" VerticalAlignment="Top" Width="352" Foreground="#FF00A7FF"/>
         <!--<RichTextBox Margin="5,214,21,63" TextChanged="RichTextBox_TextChanged" Visibility="Hidden">
             <FlowDocument>
                 <Paragraph>

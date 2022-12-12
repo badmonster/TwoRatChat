@@ -53,27 +53,27 @@ namespace TwoRatChat.Main.NewTwitchAuth
         };
         public NewTwitchAuthWindow()
         {
+            /* Temp cefsharp dissable
+            #if !NETCOREAPP
+                        var settings = new CefSettings()
+                        {
 
-#if !NETCOREAPP
-            var settings = new CefSettings()
-            {
+                            //By default CefSharp will use an in-memory cache, you need to specify a Cache Folder to persist data
 
-                //By default CefSharp will use an in-memory cache, you need to specify a Cache Folder to persist data
+                            CachePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Oxlamon\\CefSharp\\Cache")
 
-                CachePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Oxlamon\\CefSharp\\Cache")
+                        };
 
-            };
+                        //Example of setting a command line argument
+                        //Enables WebRTC
 
-            //Example of setting a command line argument
-            //Enables WebRTC
+                        settings.CefCommandLineArgs.Add("enable-media-stream");
 
-            settings.CefCommandLineArgs.Add("enable-media-stream");
+                        //Perform dependency check to make sure all relevant resources are in our output directory.
 
-            //Perform dependency check to make sure all relevant resources are in our output directory.
-
-            Cef.Initialize(settings, performDependencyCheck: true, browserProcessHandler: null);
-#endif
-
+                        Cef.Initialize(settings, performDependencyCheck: true, browserProcessHandler: null);
+            #endif
+            */
             InitializeComponent();
             DataContext = this;
 
@@ -81,7 +81,7 @@ namespace TwoRatChat.Main.NewTwitchAuth
             var authUrl = $"https://id.twitch.tv/oauth2/authorize?response_type=code&client_id={ClientId}&redirect_uri={RedirectUrl}&scope={String.Join("+", Scopes)}";
             //var authUrl = $"https://id.twitch.tv/oauth2/authorize?response_type=code&client_id={0}&redirect_uri=http://localhost&scope=channel_read&state=123456", TwoRatChat.Main.Properties.Settings.Default.twitchAPIKey
 
-            //System.Diagnostics.Process.Start(authUrl);
+            System.Diagnostics.Process.Start(authUrl);
 
             //second = this;
             WebBrowser(authUrl);
@@ -90,8 +90,9 @@ namespace TwoRatChat.Main.NewTwitchAuth
 
         public string WebBrowser(string authUrl)
         {
-            Browser.Address = authUrl;
-            Browser = new ChromiumWebBrowser(authUrl);
+            //Temp cefsharp dissable too
+            //Browser.Address = authUrl;
+            //Browser = new ChromiumWebBrowser(authUrl);
             return string.Format("<HTML><BODY>Thanks for allowing TwitchAuthWPF to authenticate<br></BODY></HTML>");
         }
         /*
