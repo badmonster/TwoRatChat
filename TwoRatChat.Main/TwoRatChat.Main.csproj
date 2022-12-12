@@ -683,6 +683,7 @@
     <Content Include="local\data\Sounds\trombon.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="System.Windows.Controls.DataVisualization.Toolkit.dll" />
     <Resource Include="Dialogs\qr.png" />
     <None Include="Data\FullSizes\js\jquery.cycleText.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
